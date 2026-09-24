@@ -11,4 +11,9 @@
     Private Sub btnCANCEL_Click(sender As Object, e As EventArgs) Handles btnCANCEL.Click
         pnlExitConfirmation.Visible = False
     End Sub
+
+    Private Sub teacher_Paint(sender As Object, e As PaintEventArgs) Handles teacher.Paint
+
+    End Sub
+
 End Class
