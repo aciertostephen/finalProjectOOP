@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -30,8 +31,9 @@ Partial Class Form1
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         SplitContainer1 = New SplitContainer()
+        Panel1 = New Panel()
+        Label2 = New Label()
         PLP = New Label()
         logoPLP = New PictureBox()
         gradeEncoder = New Label()
@@ -45,17 +47,16 @@ Partial Class Form1
         btnEXITF = New Guna.UI2.WinForms.Guna2Button()
         btnCANCEL = New Guna.UI2.WinForms.Guna2Button()
         exitQuestions = New Label()
-        Panel1 = New Panel()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
+        Panel1.SuspendLayout()
         CType(logoPLP, ComponentModel.ISupportInitialize).BeginInit()
         pnlLoginCard.SuspendLayout()
         teacher.SuspendLayout()
         pnlLogin.SuspendLayout()
         pnlExitConfirmation.SuspendLayout()
-        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -76,8 +77,36 @@ Partial Class Form1
         SplitContainer1.SplitterWidth = 1
         SplitContainer1.TabIndex = 0
         ' 
+        ' Panel1
+        ' 
+        Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
+        Panel1.BackgroundImageLayout = ImageLayout.Stretch
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(PLP)
+        Panel1.Controls.Add(logoPLP)
+        Panel1.Controls.Add(gradeEncoder)
+        Panel1.Dock = DockStyle.Left
+        Panel1.Location = New Point(0, 0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1160, 1055)
+        Panel1.TabIndex = 3
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
+        Label2.Location = New Point(537, 1018)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(83, 28)
+        Label2.TabIndex = 3
+        Label2.Text = "ELEMENT"
+        Label2.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' PLP
         ' 
+        PLP.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         PLP.BackColor = Color.Transparent
         PLP.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         PLP.ForeColor = Color.FromArgb(CByte(247), CByte(242), CByte(101))
@@ -90,10 +119,11 @@ Partial Class Form1
         ' 
         ' logoPLP
         ' 
+        logoPLP.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         logoPLP.BackColor = Color.Transparent
         logoPLP.BackgroundImage = CType(resources.GetObject("logoPLP.BackgroundImage"), Image)
         logoPLP.BackgroundImageLayout = ImageLayout.Zoom
-        logoPLP.Location = New Point(550, 50)
+        logoPLP.Location = New Point(550, 47)
         logoPLP.Name = "logoPLP"
         logoPLP.Size = New Size(100, 100)
         logoPLP.TabIndex = 1
@@ -101,6 +131,7 @@ Partial Class Form1
         ' 
         ' gradeEncoder
         ' 
+        gradeEncoder.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         gradeEncoder.BackColor = Color.Transparent
         gradeEncoder.Font = New Font("Century Gothic", 55.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         gradeEncoder.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
@@ -115,7 +146,7 @@ Partial Class Form1
         ' 
         pnlLoginCard.Controls.Add(teacher)
         pnlLoginCard.Controls.Add(student)
-        pnlLoginCard.Dock = DockStyle.Fill
+        pnlLoginCard.Dock = DockStyle.Right
         pnlLoginCard.Location = New Point(0, 0)
         pnlLoginCard.Name = "pnlLoginCard"
         pnlLoginCard.Size = New Size(763, 1055)
@@ -134,6 +165,7 @@ Partial Class Form1
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
@@ -146,6 +178,7 @@ Partial Class Form1
         ' 
         ' btnEXIT
         ' 
+        btnEXIT.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         btnEXIT.BackColor = Color.Transparent
         btnEXIT.BorderColor = Color.Transparent
         btnEXIT.BorderRadius = 10
@@ -158,6 +191,8 @@ Partial Class Form1
         btnEXIT.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnEXIT.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnEXIT.Location = New Point(656, 26)
+        btnEXIT.MaximumSize = New Size(73, 46)
+        btnEXIT.MinimumSize = New Size(73, 46)
         btnEXIT.Name = "btnEXIT"
         btnEXIT.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnEXIT.Size = New Size(73, 46)
@@ -214,6 +249,7 @@ Partial Class Form1
         ' 
         ' btnEXITF
         ' 
+        btnEXITF.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         btnEXITF.BackColor = Color.Transparent
         btnEXITF.BorderColor = Color.Transparent
         btnEXITF.BorderRadius = 10
@@ -234,6 +270,7 @@ Partial Class Form1
         ' 
         ' btnCANCEL
         ' 
+        btnCANCEL.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         btnCANCEL.BackColor = Color.Transparent
         btnCANCEL.BorderColor = Color.Transparent
         btnCANCEL.BorderRadius = 10
@@ -254,6 +291,7 @@ Partial Class Form1
         ' 
         ' exitQuestions
         ' 
+        exitQuestions.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         exitQuestions.AutoSize = True
         exitQuestions.BackColor = Color.Transparent
         exitQuestions.Font = New Font("Century Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -262,19 +300,6 @@ Partial Class Form1
         exitQuestions.Size = New Size(424, 49)
         exitQuestions.TabIndex = 0
         exitQuestions.Text = "Do you want to exit?"
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
-        Panel1.BackgroundImageLayout = ImageLayout.Stretch
-        Panel1.Controls.Add(PLP)
-        Panel1.Controls.Add(logoPLP)
-        Panel1.Controls.Add(gradeEncoder)
-        Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1160, 1055)
-        Panel1.TabIndex = 3
         ' 
         ' Form1
         ' 
@@ -293,13 +318,13 @@ Partial Class Form1
         SplitContainer1.Panel2.ResumeLayout(False)
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
+        Panel1.ResumeLayout(False)
         CType(logoPLP, ComponentModel.ISupportInitialize).EndInit()
         pnlLoginCard.ResumeLayout(False)
         teacher.ResumeLayout(False)
         pnlLogin.ResumeLayout(False)
         pnlExitConfirmation.ResumeLayout(False)
         pnlExitConfirmation.PerformLayout()
-        Panel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -318,5 +343,6 @@ Partial Class Form1
     Friend WithEvents btnCANCEL As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents exitQuestions As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label2 As Label
 
 End Class
