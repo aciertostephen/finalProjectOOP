@@ -1,7 +1,7 @@
 ﻿Imports System.Xml
 
 Public Class Form1
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnEXIT.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         pnlExitConfirmation.Visible = True
         pnlExitConfirmation.BringToFront()
     End Sub
@@ -43,12 +43,7 @@ Public Class Form1
         CInt(SplitContainer1.ClientSize.Width * 0.6)
 
         UpdateLeftPanel()
-
-        'CENTER EXIT CONFIRMATION
-        pnlExitConfirmation.Location = New Point(
-        (Me.ClientSize.Width - pnlExitConfirmation.Width) \ 2,
-        (Me.ClientSize.Height - pnlExitConfirmation.Height) \ 2
-    )
+        UpdateRightPanel()
 
     End Sub
     Private Sub UpdateLeftPanel()
@@ -212,4 +207,212 @@ Public Class Form1
     Private Sub LoginDesign_Paint(sender As Object, e As PaintEventArgs) Handles LoginDesign.Paint
 
     End Sub
+
+    Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lblUsername.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles lblPassword.Click
+
+    End Sub
+
+    Private Sub Guna2TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkForgot.LinkClicked
+
+    End Sub
+
+    Private Sub UpdateRightPanel()
+
+        Dim panelWidth As Integer = SplitContainer1.Panel2.ClientSize.Width
+        Dim panelHeight As Integer = SplitContainer1.Panel2.ClientSize.Height
+
+        If panelWidth <= 0 OrElse panelHeight <= 0 Then
+            Return
+        End If
+
+
+        '========================================
+        ' HORIZONTAL CENTER
+        '========================================
+
+        Dim centerX As Integer = panelWidth \ 2
+
+        Dim contentX As Integer =
+        centerX - (492 \ 2)
+
+
+        '========================================
+        ' VERTICAL SPACING
+        '========================================
+
+        Dim headingTop As Integer =
+        CInt(panelHeight * 0.2)
+
+        Dim headingGap As Integer =
+        CInt(panelHeight * 0.01)
+
+        Dim labelGap As Integer =
+        CInt(panelHeight * 0.045)
+
+        Dim textboxGap As Integer =
+        CInt(panelHeight * 0.01)
+
+        Dim passwordGap As Integer =
+        CInt(panelHeight * 0.01)
+
+        Dim buttonGap As Integer =
+        CInt(panelHeight * 0.055)
+
+        Dim forgotGap As Integer =
+        CInt(panelHeight * 0.015)
+
+        Dim exitGap As Integer =
+        CInt(panelHeight * 0.035)
+
+
+        '========================================
+        ' LOG IN TO YOUR
+        ' SIZE = 327 × 45
+        '========================================
+
+        lblLogintext.AutoSize = False
+        lblLogintext.Size = New Size(327, 45)
+
+        lblLogintext.Location = New Point(
+        centerX - (lblLogintext.Width \ 2),
+        headingTop
+    )
+
+        lblLogintext.TextAlign =
+        ContentAlignment.MiddleCenter
+
+
+        '========================================
+        ' ACCOUNT
+        ' SIZE = 188 × 43
+        '========================================
+
+        lblAccounttext.AutoSize = False
+        lblAccounttext.Size = New Size(188, 43)
+
+        lblAccounttext.Location = New Point(
+        centerX - (lblAccounttext.Width \ 2),
+        lblLogintext.Bottom + headingGap
+    )
+
+        lblAccounttext.TextAlign =
+        ContentAlignment.MiddleCenter
+
+
+        '========================================
+        ' USERNAME LABEL
+        ' SIZE = 172 × 28
+        '========================================
+
+        lblUsername.AutoSize = False
+        lblUsername.Size = New Size(172, 28)
+
+        lblUsername.Location = New Point(
+        contentX,
+        lblAccounttext.Bottom + labelGap
+    )
+
+        lblUsername.TextAlign =
+        ContentAlignment.MiddleLeft
+
+
+        '========================================
+        ' USERNAME TEXTBOX
+        ' SIZE = 492 × 51
+        '========================================
+
+        txtUsername.Size = New Size(492, 51)
+
+        txtUsername.Location = New Point(
+        contentX,
+        lblUsername.Bottom + textboxGap
+    )
+
+
+        '========================================
+        ' PASSWORD LABEL
+        ' SIZE = 108 × 28
+        '========================================
+
+        lblPassword.AutoSize = False
+        lblPassword.Size = New Size(108, 28)
+
+        lblPassword.Location = New Point(
+        contentX,
+        txtUsername.Bottom + passwordGap
+    )
+
+        lblPassword.TextAlign =
+        ContentAlignment.MiddleLeft
+
+
+        '========================================
+        ' PASSWORD TEXTBOX
+        ' SIZE = 492 × 51
+        '========================================
+
+        txtPassword.Size = New Size(492, 51)
+
+        txtPassword.Location = New Point(
+        contentX,
+        lblPassword.Bottom + textboxGap
+    )
+
+
+        '========================================
+        ' LOGIN BUTTON
+        ' SIZE = 492 × 65
+        '========================================
+
+        btnLogin.Size = New Size(492, 65)
+
+        btnLogin.Location = New Point(
+        contentX,
+        txtPassword.Bottom + buttonGap
+    )
+
+
+        '========================================
+        ' FORGOT PASSWORD
+        ' SIZE = 139 × 20
+        '========================================
+
+        linkForgot.AutoSize = False
+        linkForgot.Size = New Size(139, 20)
+
+        linkForgot.Location = New Point(
+        btnLogin.Right - linkForgot.Width,
+        btnLogin.Bottom + forgotGap
+    )
+
+        linkForgot.TextAlign =
+        ContentAlignment.MiddleRight
+
+
+        '========================================
+        ' EXIT BUTTON
+        ' SIZE = 492 × 44
+        '========================================
+
+        btnExit.Size = New Size(492, 44)
+
+        btnExit.Location = New Point(
+        contentX,
+        linkForgot.Bottom + exitGap
+    )
+
+    End Sub
+
 End Class
