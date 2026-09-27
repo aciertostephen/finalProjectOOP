@@ -406,7 +406,7 @@ Public Class Form1
         ' SIZE = 492 × 44
         '========================================
 
-        btnExit.Size = New Size(492, 44)
+        btnExit.Size = New Size(492, 51)
 
         btnExit.Location = New Point(
         contentX,

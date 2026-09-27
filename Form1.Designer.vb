@@ -45,6 +45,7 @@ Partial Class Form1
         picLogo = New PictureBox()
         lblGrade = New Label()
         pnlLoginCard = New Panel()
+        lblAccounttext = New Label()
         txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         lblPassword = New Label()
@@ -58,7 +59,6 @@ Partial Class Form1
         btnEXITF = New Guna.UI2.WinForms.Guna2Button()
         btnCANCEL = New Guna.UI2.WinForms.Guna2Button()
         exitQuestions = New Label()
-        lblAccounttext = New Label()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
@@ -181,6 +181,18 @@ Partial Class Form1
         pnlLoginCard.Name = "pnlLoginCard"
         pnlLoginCard.Size = New Size(763, 1055)
         pnlLoginCard.TabIndex = 0
+        ' 
+        ' lblAccounttext
+        ' 
+        lblAccounttext.BackColor = Color.Transparent
+        lblAccounttext.Font = New Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblAccounttext.ForeColor = Color.Black
+        lblAccounttext.Location = New Point(319, 210)
+        lblAccounttext.Name = "lblAccounttext"
+        lblAccounttext.Size = New Size(188, 43)
+        lblAccounttext.TabIndex = 10
+        lblAccounttext.Text = "ACCOUNT"
+        lblAccounttext.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' txtPassword
         ' 
@@ -318,7 +330,7 @@ Partial Class Form1
         btnExit.Location = New Point(146, 787)
         btnExit.Name = "btnExit"
         btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        btnExit.Size = New Size(492, 44)
+        btnExit.Size = New Size(492, 51)
         btnExit.TabIndex = 1
         btnExit.Text = "Exit"
         ' 
@@ -414,18 +426,6 @@ Partial Class Form1
         exitQuestions.Size = New Size(424, 49)
         exitQuestions.TabIndex = 0
         exitQuestions.Text = "Do you want to exit?"
-        ' 
-        ' lblAccounttext
-        ' 
-        lblAccounttext.BackColor = Color.Transparent
-        lblAccounttext.Font = New Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblAccounttext.ForeColor = Color.Black
-        lblAccounttext.Location = New Point(319, 210)
-        lblAccounttext.Name = "lblAccounttext"
-        lblAccounttext.Size = New Size(188, 43)
-        lblAccounttext.TabIndex = 10
-        lblAccounttext.Text = "ACCOUNT"
-        lblAccounttext.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Form1
         ' 
