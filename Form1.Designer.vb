@@ -33,10 +33,11 @@ Partial Class Form1
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         SplitContainer1 = New SplitContainer()
         Panel1 = New Panel()
-        Label2 = New Label()
-        PLP = New Label()
-        logoPLP = New PictureBox()
-        gradeEncoder = New Label()
+        lblEncoder = New Label()
+        lblElement = New Label()
+        lblSchool = New Label()
+        picLogo = New PictureBox()
+        lblGrade = New Label()
         pnlLoginCard = New Panel()
         teacher = New Panel()
         Label1 = New Label()
@@ -52,7 +53,7 @@ Partial Class Form1
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
         Panel1.SuspendLayout()
-        CType(logoPLP, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picLogo, ComponentModel.ISupportInitialize).BeginInit()
         pnlLoginCard.SuspendLayout()
         teacher.SuspendLayout()
         pnlLogin.SuspendLayout()
@@ -81,66 +82,78 @@ Partial Class Form1
         ' 
         Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
         Panel1.BackgroundImageLayout = ImageLayout.Stretch
-        Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(PLP)
-        Panel1.Controls.Add(logoPLP)
-        Panel1.Controls.Add(gradeEncoder)
+        Panel1.Controls.Add(lblEncoder)
+        Panel1.Controls.Add(lblElement)
+        Panel1.Controls.Add(lblSchool)
+        Panel1.Controls.Add(picLogo)
+        Panel1.Controls.Add(lblGrade)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1160, 1055)
         Panel1.TabIndex = 3
         ' 
-        ' Label2
+        ' lblEncoder
         ' 
-        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
-        Label2.Location = New Point(537, 1018)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(83, 28)
-        Label2.TabIndex = 3
-        Label2.Text = "ELEMENT"
-        Label2.TextAlign = ContentAlignment.MiddleCenter
+        lblEncoder.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblEncoder.BackColor = Color.Transparent
+        lblEncoder.Font = New Font("Century Gothic", 60F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblEncoder.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
+        lblEncoder.Location = New Point(329, 643)
+        lblEncoder.Name = "lblEncoder"
+        lblEncoder.Size = New Size(522, 102)
+        lblEncoder.TabIndex = 4
+        lblEncoder.Text = "ENCODER"
+        lblEncoder.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' PLP
+        ' lblElement
         ' 
-        PLP.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        PLP.BackColor = Color.Transparent
-        PLP.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        PLP.ForeColor = Color.FromArgb(CByte(247), CByte(242), CByte(101))
-        PLP.Location = New Point(406, 150)
-        PLP.Name = "PLP"
-        PLP.Size = New Size(389, 26)
-        PLP.TabIndex = 2
-        PLP.Text = "PAMANTASAN NG LUNGSOD NG PASIG" & vbCrLf
-        PLP.TextAlign = ContentAlignment.MiddleCenter
+        lblElement.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblElement.BackColor = Color.Transparent
+        lblElement.Font = New Font("Century Gothic", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblElement.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
+        lblElement.Location = New Point(537, 1018)
+        lblElement.Name = "lblElement"
+        lblElement.Size = New Size(83, 28)
+        lblElement.TabIndex = 3
+        lblElement.Text = "ELEMENT"
+        lblElement.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' logoPLP
+        ' lblSchool
         ' 
-        logoPLP.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        logoPLP.BackColor = Color.Transparent
-        logoPLP.BackgroundImage = CType(resources.GetObject("logoPLP.BackgroundImage"), Image)
-        logoPLP.BackgroundImageLayout = ImageLayout.Zoom
-        logoPLP.Location = New Point(550, 47)
-        logoPLP.Name = "logoPLP"
-        logoPLP.Size = New Size(100, 100)
-        logoPLP.TabIndex = 1
-        logoPLP.TabStop = False
+        lblSchool.BackColor = Color.Transparent
+        lblSchool.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblSchool.ForeColor = Color.FromArgb(CByte(247), CByte(242), CByte(101))
+        lblSchool.Location = New Point(406, 150)
+        lblSchool.Name = "lblSchool"
+        lblSchool.Size = New Size(389, 26)
+        lblSchool.TabIndex = 2
+        lblSchool.Text = "PAMANTASAN NG LUNGSOD NG PASIG" & vbCrLf
+        lblSchool.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' gradeEncoder
+        ' picLogo
         ' 
-        gradeEncoder.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        gradeEncoder.BackColor = Color.Transparent
-        gradeEncoder.Font = New Font("Century Gothic", 55.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        gradeEncoder.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
-        gradeEncoder.Location = New Point(340, 440)
-        gradeEncoder.Name = "gradeEncoder"
-        gradeEncoder.Size = New Size(520, 234)
-        gradeEncoder.TabIndex = 0
-        gradeEncoder.Text = "GRADE " & vbCrLf & "ENCODER"
-        gradeEncoder.TextAlign = ContentAlignment.MiddleCenter
+        picLogo.BackColor = Color.Transparent
+        picLogo.BackgroundImage = CType(resources.GetObject("picLogo.BackgroundImage"), Image)
+        picLogo.BackgroundImageLayout = ImageLayout.Zoom
+        picLogo.Location = New Point(550, 47)
+        picLogo.Name = "picLogo"
+        picLogo.Size = New Size(100, 100)
+        picLogo.TabIndex = 1
+        picLogo.TabStop = False
+        ' 
+        ' lblGrade
+        ' 
+        lblGrade.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblGrade.BackColor = Color.Transparent
+        lblGrade.Font = New Font("Century Gothic", 60F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblGrade.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
+        lblGrade.Location = New Point(394, 526)
+        lblGrade.Name = "lblGrade"
+        lblGrade.Size = New Size(389, 117)
+        lblGrade.TabIndex = 0
+        lblGrade.Text = "GRADE"
+        lblGrade.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' pnlLoginCard
         ' 
@@ -319,7 +332,7 @@ Partial Class Form1
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
         Panel1.ResumeLayout(False)
-        CType(logoPLP, ComponentModel.ISupportInitialize).EndInit()
+        CType(picLogo, ComponentModel.ISupportInitialize).EndInit()
         pnlLoginCard.ResumeLayout(False)
         teacher.ResumeLayout(False)
         pnlLogin.ResumeLayout(False)
@@ -330,9 +343,9 @@ Partial Class Form1
 
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents pnlLogin As Panel
-    Friend WithEvents PLP As Label
-    Friend WithEvents logoPLP As PictureBox
-    Friend WithEvents gradeEncoder As Label
+    Friend WithEvents lblSchool As Label
+    Friend WithEvents picLogo As PictureBox
+    Friend WithEvents lblGrade As Label
     Friend WithEvents pnlLoginCard As Panel
     Friend WithEvents teacher As Panel
     Friend WithEvents student As Panel
@@ -343,6 +356,7 @@ Partial Class Form1
     Friend WithEvents btnCANCEL As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents exitQuestions As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblElement As Label
+    Friend WithEvents lblEncoder As Label
 
 End Class
