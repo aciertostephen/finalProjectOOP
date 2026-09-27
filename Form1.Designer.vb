@@ -23,22 +23,23 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         SplitContainer1 = New SplitContainer()
         LoginDesign = New Panel()
+        picCCS = New PictureBox()
         lblEncoder = New Label()
         lblElement = New Label()
         lblSchool = New Label()
@@ -64,6 +65,7 @@ Partial Class Form1
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
         LoginDesign.SuspendLayout()
+        CType(picCCS, ComponentModel.ISupportInitialize).BeginInit()
         CType(picLogo, ComponentModel.ISupportInitialize).BeginInit()
         pnlLoginCard.SuspendLayout()
         pnlLogin.SuspendLayout()
@@ -92,6 +94,7 @@ Partial Class Form1
         ' 
         LoginDesign.BackgroundImage = CType(resources.GetObject("LoginDesign.BackgroundImage"), Image)
         LoginDesign.BackgroundImageLayout = ImageLayout.Stretch
+        LoginDesign.Controls.Add(picCCS)
         LoginDesign.Controls.Add(lblEncoder)
         LoginDesign.Controls.Add(lblElement)
         LoginDesign.Controls.Add(lblSchool)
@@ -102,6 +105,17 @@ Partial Class Form1
         LoginDesign.Name = "LoginDesign"
         LoginDesign.Size = New Size(1160, 1055)
         LoginDesign.TabIndex = 3
+        ' 
+        ' picCCS
+        ' 
+        picCCS.BackColor = Color.Transparent
+        picCCS.BackgroundImage = CType(resources.GetObject("picCCS.BackgroundImage"), Image)
+        picCCS.BackgroundImageLayout = ImageLayout.Zoom
+        picCCS.Location = New Point(946, 110)
+        picCCS.Name = "picCCS"
+        picCCS.Size = New Size(100, 100)
+        picCCS.TabIndex = 5
+        picCCS.TabStop = False
         ' 
         ' lblEncoder
         ' 
@@ -146,7 +160,7 @@ Partial Class Form1
         picLogo.BackColor = Color.Transparent
         picLogo.BackgroundImage = CType(resources.GetObject("picLogo.BackgroundImage"), Image)
         picLogo.BackgroundImageLayout = ImageLayout.Zoom
-        picLogo.Location = New Point(550, 47)
+        picLogo.Location = New Point(173, 110)
         picLogo.Name = "picLogo"
         picLogo.Size = New Size(100, 100)
         picLogo.TabIndex = 1
@@ -198,7 +212,7 @@ Partial Class Form1
         ' 
         txtPassword.BackColor = Color.Transparent
         txtPassword.BorderRadius = 10
-        txtPassword.CustomizableEdges = CustomizableEdges1
+        txtPassword.CustomizableEdges = CustomizableEdges15
         txtPassword.DefaultText = ""
         txtPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -215,7 +229,7 @@ Partial Class Form1
         txtPassword.PlaceholderForeColor = Color.Black
         txtPassword.PlaceholderText = ""
         txtPassword.SelectedText = ""
-        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         txtPassword.Size = New Size(492, 51)
         txtPassword.TabIndex = 9
         ' 
@@ -223,7 +237,7 @@ Partial Class Form1
         ' 
         txtUsername.BackColor = Color.Transparent
         txtUsername.BorderRadius = 10
-        txtUsername.CustomizableEdges = CustomizableEdges3
+        txtUsername.CustomizableEdges = CustomizableEdges17
         txtUsername.DefaultText = ""
         txtUsername.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtUsername.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -240,7 +254,7 @@ Partial Class Form1
         txtUsername.PlaceholderForeColor = Color.Black
         txtUsername.PlaceholderText = ""
         txtUsername.SelectedText = ""
-        txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         txtUsername.Size = New Size(492, 51)
         txtUsername.TabIndex = 8
         ' 
@@ -287,7 +301,7 @@ Partial Class Form1
         btnLogin.BackColor = Color.Transparent
         btnLogin.BorderColor = Color.Transparent
         btnLogin.BorderRadius = 10
-        btnLogin.CustomizableEdges = CustomizableEdges5
+        btnLogin.CustomizableEdges = CustomizableEdges19
         btnLogin.DisabledState.BorderColor = Color.DarkGray
         btnLogin.DisabledState.CustomBorderColor = Color.DarkGray
         btnLogin.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -297,7 +311,7 @@ Partial Class Form1
         btnLogin.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnLogin.Location = New Point(146, 634)
         btnLogin.Name = "btnLogin"
-        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         btnLogin.Size = New Size(492, 65)
         btnLogin.TabIndex = 4
         btnLogin.Text = "Log in"
@@ -319,7 +333,7 @@ Partial Class Form1
         btnExit.BackColor = Color.Transparent
         btnExit.BorderColor = Color.Transparent
         btnExit.BorderRadius = 10
-        btnExit.CustomizableEdges = CustomizableEdges7
+        btnExit.CustomizableEdges = CustomizableEdges21
         btnExit.DisabledState.BorderColor = Color.DarkGray
         btnExit.DisabledState.CustomBorderColor = Color.DarkGray
         btnExit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -329,7 +343,7 @@ Partial Class Form1
         btnExit.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnExit.Location = New Point(146, 787)
         btnExit.Name = "btnExit"
-        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         btnExit.Size = New Size(492, 51)
         btnExit.TabIndex = 1
         btnExit.Text = "Exit"
@@ -356,17 +370,17 @@ Partial Class Form1
         pnlExitConfirmation.Controls.Add(exitQuestions)
         pnlExitConfirmation.CustomBorderColor = Color.Black
         pnlExitConfirmation.CustomBorderThickness = New Padding(2)
-        CustomizableEdges13.BottomLeft = False
-        CustomizableEdges13.BottomRight = False
-        CustomizableEdges13.TopLeft = False
-        CustomizableEdges13.TopRight = False
-        pnlExitConfirmation.CustomizableEdges = CustomizableEdges13
+        CustomizableEdges27.BottomLeft = False
+        CustomizableEdges27.BottomRight = False
+        CustomizableEdges27.TopLeft = False
+        CustomizableEdges27.TopRight = False
+        pnlExitConfirmation.CustomizableEdges = CustomizableEdges27
         pnlExitConfirmation.FillColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         pnlExitConfirmation.Location = New Point(637, 427)
         pnlExitConfirmation.Name = "pnlExitConfirmation"
         pnlExitConfirmation.RightToLeft = RightToLeft.No
         pnlExitConfirmation.ShadowDecoration.BorderRadius = 1
-        pnlExitConfirmation.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        pnlExitConfirmation.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         pnlExitConfirmation.ShadowDecoration.Depth = 50
         pnlExitConfirmation.ShadowDecoration.Shadow = New Padding(1)
         pnlExitConfirmation.Size = New Size(650, 200)
@@ -379,7 +393,7 @@ Partial Class Form1
         btnEXITF.BackColor = Color.Transparent
         btnEXITF.BorderColor = Color.Transparent
         btnEXITF.BorderRadius = 10
-        btnEXITF.CustomizableEdges = CustomizableEdges9
+        btnEXITF.CustomizableEdges = CustomizableEdges23
         btnEXITF.DisabledState.BorderColor = Color.DarkGray
         btnEXITF.DisabledState.CustomBorderColor = Color.DarkGray
         btnEXITF.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -389,7 +403,7 @@ Partial Class Form1
         btnEXITF.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnEXITF.Location = New Point(526, 128)
         btnEXITF.Name = "btnEXITF"
-        btnEXITF.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnEXITF.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         btnEXITF.Size = New Size(104, 46)
         btnEXITF.TabIndex = 4
         btnEXITF.Text = "EXIT"
@@ -400,7 +414,7 @@ Partial Class Form1
         btnCANCEL.BackColor = Color.Transparent
         btnCANCEL.BorderColor = Color.Transparent
         btnCANCEL.BorderRadius = 10
-        btnCANCEL.CustomizableEdges = CustomizableEdges11
+        btnCANCEL.CustomizableEdges = CustomizableEdges25
         btnCANCEL.DisabledState.BorderColor = Color.DarkGray
         btnCANCEL.DisabledState.CustomBorderColor = Color.DarkGray
         btnCANCEL.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -410,7 +424,7 @@ Partial Class Form1
         btnCANCEL.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnCANCEL.Location = New Point(416, 128)
         btnCANCEL.Name = "btnCANCEL"
-        btnCANCEL.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnCANCEL.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         btnCANCEL.Size = New Size(104, 46)
         btnCANCEL.TabIndex = 3
         btnCANCEL.Text = "CANCEL"
@@ -445,6 +459,7 @@ Partial Class Form1
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
         LoginDesign.ResumeLayout(False)
+        CType(picCCS, ComponentModel.ISupportInitialize).EndInit()
         CType(picLogo, ComponentModel.ISupportInitialize).EndInit()
         pnlLoginCard.ResumeLayout(False)
         pnlLoginCard.PerformLayout()
@@ -476,5 +491,6 @@ Partial Class Form1
     Friend WithEvents lblPassword As Label
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblAccounttext As Label
+    Friend WithEvents picCCS As PictureBox
 
 End Class

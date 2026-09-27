@@ -57,25 +57,6 @@ Public Class Form1
 
         Dim centerX As Integer = panelWidth \ 2
 
-        '========================================
-        ' LOGO
-        '========================================
-
-        Dim logoSize As Integer =
-        CInt(panelWidth * 0.048)
-
-        picLogo.Size = New Size(
-        logoSize,
-        logoSize
-    )
-
-        picLogo.Location = New Point(
-        centerX - (picLogo.Width \ 2),
-        CInt(panelHeight * 0.045)
-    )
-
-        picLogo.SizeMode = PictureBoxSizeMode.Zoom
-
 
         '========================================
         ' SCHOOL NAME
@@ -100,6 +81,55 @@ Public Class Form1
     )
 
         lblSchool.TextAlign = ContentAlignment.MiddleCenter
+
+
+        '========================================
+        ' LOGOS
+        '========================================
+
+        Dim logoSize As Integer =
+        CInt(panelWidth * 0.075)
+
+        ' LEFT LOGO - PLP
+        picLogo.Size = New Size(
+        logoSize,
+        logoSize
+    )
+
+        ' RIGHT LOGO - CCS
+        picCCS.Size = New Size(
+        logoSize,
+        logoSize
+    )
+
+        picLogo.SizeMode = PictureBoxSizeMode.Zoom
+        picCCS.SizeMode = PictureBoxSizeMode.Zoom
+
+
+        '========================================
+        ' LOGO POSITION
+        '========================================
+
+        Dim logoGap As Integer =
+        CInt(panelWidth * 0.02)
+
+        ' Center logos vertically with school name
+        Dim logoY As Integer =
+        lblSchool.Top + (lblSchool.Height - logoSize) \ 2 - 5
+
+
+        ' LEFT LOGO
+        picLogo.Location = New Point(
+        lblSchool.Left - logoGap - logoSize,
+        logoY
+    )
+
+
+        ' RIGHT LOGO
+        picCCS.Location = New Point(
+        lblSchool.Right + logoGap,
+        logoY
+    )
 
 
         '========================================
@@ -196,12 +226,6 @@ Public Class Form1
 
         lblElement.TextAlign = ContentAlignment.MiddleCenter
 
-    End Sub
-
-    Private Sub pnlExitConfirmation_Paint(sender As Object, e As PaintEventArgs) Handles pnlExitConfirmation.Paint
-        pnlExitConfirmation.Location = New Point(
-        (Me.ClientSize.Width - pnlExitConfirmation.Width) \ 2,
-        (Me.ClientSize.Height - pnlExitConfirmation.Height) \ 2)
     End Sub
 
     Private Sub LoginDesign_Paint(sender As Object, e As PaintEventArgs) Handles LoginDesign.Paint
