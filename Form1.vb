@@ -40,9 +40,15 @@ Public Class Form1
 
         '60% LEFT / 40% RIGHT
         SplitContainer1.SplitterDistance =
-            CInt(SplitContainer1.ClientSize.Width * 0.6)
+        CInt(SplitContainer1.ClientSize.Width * 0.6)
 
         UpdateLeftPanel()
+
+        'CENTER EXIT CONFIRMATION
+        pnlExitConfirmation.Location = New Point(
+        (Me.ClientSize.Width - pnlExitConfirmation.Width) \ 2,
+        (Me.ClientSize.Height - pnlExitConfirmation.Height) \ 2
+    )
 
     End Sub
     Private Sub UpdateLeftPanel()
@@ -194,6 +200,16 @@ Public Class Form1
     )
 
         lblElement.TextAlign = ContentAlignment.MiddleCenter
+
+    End Sub
+
+    Private Sub pnlExitConfirmation_Paint(sender As Object, e As PaintEventArgs) Handles pnlExitConfirmation.Paint
+        pnlExitConfirmation.Location = New Point(
+        (Me.ClientSize.Width - pnlExitConfirmation.Width) \ 2,
+        (Me.ClientSize.Height - pnlExitConfirmation.Height) \ 2)
+    End Sub
+
+    Private Sub LoginDesign_Paint(sender As Object, e As PaintEventArgs) Handles LoginDesign.Paint
 
     End Sub
 End Class
