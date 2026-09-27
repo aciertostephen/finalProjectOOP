@@ -440,4 +440,7 @@ Public Class Form1
 
     End Sub
 
+    Private Sub lblLogintext_Click(sender As Object, e As EventArgs) Handles lblLogintext.Click
+
+    End Sub
 End Class
