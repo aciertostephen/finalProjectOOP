@@ -46,4 +46,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Screens\" />
+  </ItemGroup>
+
 </Project>
