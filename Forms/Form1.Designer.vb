@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -37,6 +36,7 @@ Partial Class Form1
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         SplitContainer1 = New SplitContainer()
         LoginDesign = New Panel()
         picCCS = New PictureBox()
@@ -92,7 +92,7 @@ Partial Class Form1
         ' 
         ' LoginDesign
         ' 
-        LoginDesign.BackgroundImage = CType(resources.GetObject("LoginDesign.BackgroundImage"), Image)
+        LoginDesign.BackgroundImage = My.Resources.Resources.LOGIN_BG
         LoginDesign.BackgroundImageLayout = ImageLayout.Stretch
         LoginDesign.Controls.Add(picCCS)
         LoginDesign.Controls.Add(lblEncoder)
@@ -109,7 +109,7 @@ Partial Class Form1
         ' picCCS
         ' 
         picCCS.BackColor = Color.Transparent
-        picCCS.BackgroundImage = CType(resources.GetObject("picCCS.BackgroundImage"), Image)
+        picCCS.BackgroundImage = My.Resources.Resources.compscilogo
         picCCS.BackgroundImageLayout = ImageLayout.Zoom
         picCCS.Location = New Point(946, 110)
         picCCS.Name = "picCCS"
@@ -121,7 +121,7 @@ Partial Class Form1
         ' 
         lblEncoder.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblEncoder.BackColor = Color.Transparent
-        lblEncoder.Font = New Font("Century Gothic", 60.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblEncoder.Font = New Font("Century Gothic", 60F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblEncoder.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         lblEncoder.Location = New Point(329, 643)
         lblEncoder.Name = "lblEncoder"
@@ -146,7 +146,7 @@ Partial Class Form1
         ' lblSchool
         ' 
         lblSchool.BackColor = Color.Transparent
-        lblSchool.Font = New Font("Century Gothic", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblSchool.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblSchool.ForeColor = Color.FromArgb(CByte(247), CByte(242), CByte(101))
         lblSchool.Location = New Point(406, 150)
         lblSchool.Name = "lblSchool"
@@ -158,7 +158,7 @@ Partial Class Form1
         ' picLogo
         ' 
         picLogo.BackColor = Color.Transparent
-        picLogo.BackgroundImage = CType(resources.GetObject("picLogo.BackgroundImage"), Image)
+        picLogo.BackgroundImage = My.Resources.Resources.PLP_LOGO
         picLogo.BackgroundImageLayout = ImageLayout.Zoom
         picLogo.Location = New Point(173, 110)
         picLogo.Name = "picLogo"
@@ -170,7 +170,7 @@ Partial Class Form1
         ' 
         lblGrade.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblGrade.BackColor = Color.Transparent
-        lblGrade.Font = New Font("Century Gothic", 60.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblGrade.Font = New Font("Century Gothic", 60F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblGrade.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         lblGrade.Location = New Point(394, 526)
         lblGrade.Name = "lblGrade"
@@ -261,7 +261,7 @@ Partial Class Form1
         ' lblPassword
         ' 
         lblPassword.BackColor = Color.Transparent
-        lblPassword.Font = New Font("Century Gothic", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblPassword.Font = New Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblPassword.ForeColor = Color.Black
         lblPassword.Location = New Point(146, 462)
         lblPassword.Name = "lblPassword"
@@ -286,7 +286,7 @@ Partial Class Form1
         ' 
         linkForgot.AutoSize = True
         linkForgot.BackColor = Color.Transparent
-        linkForgot.Font = New Font("Century Gothic", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        linkForgot.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         linkForgot.LinkBehavior = LinkBehavior.NeverUnderline
         linkForgot.LinkColor = Color.FromArgb(CByte(126), CByte(126), CByte(126))
         linkForgot.Location = New Point(499, 702)
@@ -319,7 +319,7 @@ Partial Class Form1
         ' lblUsername
         ' 
         lblUsername.BackColor = Color.Transparent
-        lblUsername.Font = New Font("Century Gothic", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblUsername.Font = New Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblUsername.ForeColor = Color.Black
         lblUsername.Location = New Point(146, 360)
         lblUsername.Name = "lblUsername"
@@ -339,7 +339,7 @@ Partial Class Form1
         btnExit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnExit.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnExit.FillColor = Color.FromArgb(CByte(200), CByte(51), CByte(51))
-        btnExit.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExit.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnExit.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnExit.Location = New Point(146, 787)
         btnExit.Name = "btnExit"
@@ -399,7 +399,7 @@ Partial Class Form1
         btnEXITF.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnEXITF.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnEXITF.FillColor = Color.FromArgb(CByte(211), CByte(47), CByte(47))
-        btnEXITF.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnEXITF.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnEXITF.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnEXITF.Location = New Point(526, 128)
         btnEXITF.Name = "btnEXITF"
@@ -420,7 +420,7 @@ Partial Class Form1
         btnCANCEL.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnCANCEL.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnCANCEL.FillColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
-        btnCANCEL.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnCANCEL.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnCANCEL.ForeColor = Color.FromArgb(CByte(243), CByte(243), CByte(243))
         btnCANCEL.Location = New Point(416, 128)
         btnCANCEL.Name = "btnCANCEL"
@@ -434,7 +434,7 @@ Partial Class Form1
         exitQuestions.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         exitQuestions.AutoSize = True
         exitQuestions.BackColor = Color.Transparent
-        exitQuestions.Font = New Font("Century Gothic", 24.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        exitQuestions.Font = New Font("Century Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         exitQuestions.Location = New Point(34, 35)
         exitQuestions.Name = "exitQuestions"
         exitQuestions.Size = New Size(424, 49)
@@ -443,7 +443,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1924, 1055)
         Controls.Add(pnlLogin)
