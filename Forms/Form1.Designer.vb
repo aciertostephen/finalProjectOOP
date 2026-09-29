@@ -105,10 +105,10 @@ Partial Class Form1
         LoginDesign.BackgroundImage = My.Resources.Resources.LOGIN_BG
         LoginDesign.BackgroundImageLayout = ImageLayout.Stretch
         LoginDesign.Controls.Add(picCCS)
+        LoginDesign.Controls.Add(picLogo)
         LoginDesign.Controls.Add(lblEncoder)
         LoginDesign.Controls.Add(lblElement)
         LoginDesign.Controls.Add(lblSchool)
-        LoginDesign.Controls.Add(picLogo)
         LoginDesign.Controls.Add(lblGrade)
         LoginDesign.Dock = DockStyle.Left
         LoginDesign.Location = New Point(0, 0)
