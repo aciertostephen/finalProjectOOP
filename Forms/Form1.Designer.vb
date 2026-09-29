@@ -66,6 +66,9 @@ Partial Class Form1
         btnEXITF = New Guna.UI2.WinForms.Guna2Button()
         btnCANCEL = New Guna.UI2.WinForms.Guna2Button()
         exitQuestions = New Label()
+        pnlApp = New Panel()
+        pnlContent = New Panel()
+        pnlheader = New Panel()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
@@ -76,6 +79,7 @@ Partial Class Form1
         pnlLoginCard.SuspendLayout()
         pnlLogin.SuspendLayout()
         pnlExitConfirmation.SuspendLayout()
+        pnlApp.SuspendLayout()
         SuspendLayout()
         ' 
         ' SplitContainer1
@@ -483,6 +487,34 @@ Partial Class Form1
         exitQuestions.TabIndex = 0
         exitQuestions.Text = "Do you want to exit?"
         ' 
+        ' pnlApp
+        ' 
+        pnlApp.Controls.Add(pnlContent)
+        pnlApp.Controls.Add(pnlheader)
+        pnlApp.Dock = DockStyle.Fill
+        pnlApp.Location = New Point(0, 0)
+        pnlApp.Name = "pnlApp"
+        pnlApp.Size = New Size(1924, 1055)
+        pnlApp.TabIndex = 6
+        pnlApp.Visible = False
+        ' 
+        ' pnlContent
+        ' 
+        pnlContent.Dock = DockStyle.Fill
+        pnlContent.Location = New Point(0, 211)
+        pnlContent.Name = "pnlContent"
+        pnlContent.Size = New Size(1924, 844)
+        pnlContent.TabIndex = 1
+        ' 
+        ' pnlheader
+        ' 
+        pnlheader.BackColor = Color.FromArgb(CByte(34), CByte(90), CByte(74))
+        pnlheader.Dock = DockStyle.Top
+        pnlheader.Location = New Point(0, 0)
+        pnlheader.Name = "pnlheader"
+        pnlheader.Size = New Size(1924, 211)
+        pnlheader.TabIndex = 0
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -490,6 +522,7 @@ Partial Class Form1
         ClientSize = New Size(1924, 1055)
         Controls.Add(btnMin)
         Controls.Add(btnClose)
+        Controls.Add(pnlApp)
         Controls.Add(pnlLogin)
         Controls.Add(pnlExitConfirmation)
         FormBorderStyle = FormBorderStyle.None
@@ -510,6 +543,7 @@ Partial Class Form1
         pnlLogin.ResumeLayout(False)
         pnlExitConfirmation.ResumeLayout(False)
         pnlExitConfirmation.PerformLayout()
+        pnlApp.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -538,5 +572,8 @@ Partial Class Form1
     Friend WithEvents picCCS As PictureBox
     Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnMin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents pnlApp As Panel
+    Friend WithEvents pnlheader As Panel
+    Friend WithEvents pnlContent As Panel
 
 End Class

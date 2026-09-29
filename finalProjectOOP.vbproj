@@ -64,7 +64,8 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Screens\" />
+    <Folder Include="Screens\Student\" />
+    <Folder Include="Screens\Teacher\" />
   </ItemGroup>
 
 </Project>
