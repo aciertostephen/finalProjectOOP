@@ -440,4 +440,12 @@ Public Class Form1
 
     End Sub
 
+    Private Sub btnClose_Click_1(sender As Object, e As EventArgs) Handles btnClose.Click
+        pnlExitConfirmation.Visible = True
+        pnlExitConfirmation.BringToFront()
+    End Sub
+
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 End Class
